@@ -34,8 +34,9 @@ import java.util.Random;
  * Created by Probir Bhowmik on 09-Feb-20. Soft BD Ltd. Email:probirbhowmikcse@gmail.com
  */
 public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MYViewHolder> {
-    ContextCompat ctxs;
-    Context ctx;
+    private ContextCompat ctxs;
+    private Context ctx;
+    private onVideoPlayListItemClickListener onVideoPlayListItemClickListener;
     private YouTubePlayerView youTubePlayerView;
     private Context context;
 
@@ -113,6 +114,7 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MYViewHo
         holder.RV_mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 //                Toast.makeText(v.getContext(), "" + qModel.getSubjectName() + " " + position, Toast.LENGTH_SHORT).show();
                 playerNameTv.setText(qModel.getSubjectName());
 //                Context context = v.getContext();
